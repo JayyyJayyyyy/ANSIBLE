@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+  - name: show IP address
+    ansible.builtin.debug:
+      msg: >
+       This host uses IP address {{ ansible_facts['device_links'][uuids][0][0] }}
